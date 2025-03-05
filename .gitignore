@@ -1,0 +1,14 @@
+# Binary
+oumugaeshi
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+
+# Temporary files
+tmp/
+*.tmp
+
+# Logs
+*.log
