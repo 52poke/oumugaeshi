@@ -81,7 +81,7 @@ func transformPath(transcodedPath string) (string, bool) {
 	// Extract the file path from the transcoded path pattern
 	// Example: /wiki/transcoded/4/40/abc.oga/abc.oga.webm -> /wiki/4/40/abc.oga
 	parts := strings.Split(transcodedPath, "/")
-	if len(parts) >= 6 && parts[1] == "wiki" && parts[2] == "transcoded" && parts[5]+".webm" == parts[6] {
+	if len(parts) > 6 && parts[1] == "wiki" && parts[2] == "transcoded" && parts[5]+".webm" == parts[6] {
 		// Reconstruct path without the "transcoded" part and the last segment
 		return fmt.Sprintf("/%s/%s/%s/%s", parts[1], parts[3], parts[4], parts[5]), true
 	}
