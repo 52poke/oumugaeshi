@@ -7,6 +7,7 @@ A reverse proxy that automatically remuxes OGG/OPUS audio files to WebM containe
 - Transparent proxying of audio files stored in S3-compatible storage
 - Automatic remuxing of OGG/OPUS files to WebM container format (without transcoding)
 - Caching of remuxed files in S3 bucket
+- Support for DELETE operations to clean up remuxed files
 
 ## Requirements
 

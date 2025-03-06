@@ -120,3 +120,13 @@ func (s *S3Client) UploadFile(localPath, s3Path string, contentType string) erro
 	})
 	return err
 }
+
+// DeleteObject deletes an object from S3
+func (s *S3Client) DeleteObject(ctx context.Context, path string) error {
+	key := strings.TrimPrefix(path, "/")
+	_, err := s.Client.DeleteObject(ctx, &s3.DeleteObjectInput{
+		Bucket: aws.String(s.BucketName),
+		Key:    aws.String(key),
+	})
+	return err
+}
